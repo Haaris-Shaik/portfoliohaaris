@@ -1,0 +1,44 @@
+<%- include("partials/header.ejs") %>
+<br>
+<br>
+<div class="content">
+    <div class="about">
+        <div class="text">
+            <h1><strong>HI THERE!! I'M HAARIS</strong></h1>
+            <p>
+                
+A final-year student at the National Institute of Technology Calicut, I have a built a deep passion for problem-solving and creativity. My enthusiasm for Data Structures and Algorithms, and Web Development ignited in mid-2023, and since then, I've fully immersed myself in these fields.
+
+I've tackled around 400 DSA problems and built several projects that have enriched my learning experience. Moving forward, I am committed to sharing concepts and latest tech news by posting a weekly blog and offering daily insights into the LeetCode problem of the day.
+
+I'm excited to continue growing and contributing to the tech community.
+            </p>     
+        </div>
+    </div>
+    <div class="profilepic">
+        <img src="images/profile.png" alt="image" class="profile">
+    </div>
+</div>
+
+<div class="slidebox">
+    <h1 class="head">WORKS</h1>
+    <div class="container">
+        <div class="card-slider">
+            <% cards.forEach(function(card) { %>
+                <div class="card">
+                    <img src="<%= card.image %>" class="card-img-top" alt="<%= card.title %>">
+                    <div class="card-body">
+                        <h5 class="card-title"><%= card.title %></h5>
+                        <p class="card-text"><%= card.description %></p>
+                    </div>
+                </div>
+            <% }) %>
+        </div>
+        <button class="prev-btn">‹</button>
+        <button class="next-btn">›</button>
+    </div>
+</div>
+
+<script src="js/slide.js"></script>
+
+<%- include("partials/footer.ejs") %>
